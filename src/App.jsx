@@ -10,9 +10,10 @@ import Header from './components/Header'
 import Category from './pages/category/Category'
 
 function App() {
+ 
   return (
     <BrowserRouter>
-     <Header />
+     {window.location.pathname !== '/login' && window.location.pathname !== '/signup' && <Header />}
       <Routes>
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
